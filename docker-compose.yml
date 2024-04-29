@@ -1,0 +1,24 @@
+version: '3'
+services:
+  #maku-generator
+  maku-generator:
+    image: zerfa/maku-generator:3.1.0
+#    restart: always
+    hostname: maku-generator
+    container_name: maku-generator
+    networks:
+      - network
+    ports:
+      - 3307:8088
+    environment:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://mysql:3306/maku_generator?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+      username: root
+      password: 123456
+
+
+
+
+networks:
+  network:
+    external: true

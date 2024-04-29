@@ -10,10 +10,10 @@ services:
 #    ports:
 #      - 3307:8088
     environment:
-      driver_class_name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://mysql:3306/maku_generator?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
-      username: root
-      password: 123456
+      DATASOURCE_DRIVER_CLASS_NAME: com.mysql.cj.jdbc.Driver
+      DATASOURCE_URL: jdbc:mysql://mysql:3306/maku_generator?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai&nullCatalogMeansCurrent=true
+      DATASOURCE_NAME: root
+      DATASOURCE_PASSWORD: 123456
 
 
 
